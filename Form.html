@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styleweb.css" />
+</head>
+
+<body>
+    <div>
+        <nav>
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+
+                <a class="nav-link" href="galeriaWeb.html">Galeria</a><br>
+
+
+
+
+
+                <a class="nav-link" href="Creador.html">Creador</a><br>
+
+
+
+                <a class="nav-link" href="index.html">Inici</a>
+
+            </ul>
+
+        </nav>
+    </div>
+
+    <form onsubmit="return validarEnt()" ;>
+
+
+        <fieldset>
+            <legend>Dades Personals</legend>
+            <div>
+                <div>
+                    <div><label for="nom">Nom i llinatges</label><span id="Error nom"></span></div>
+                    <div>
+                        <input type="text" name="nom" placeholder="Nom i Llinatges..." pattern="[A-Z][a-z]+( [A-Z](\.|[a-z]+))?( [A-Z][a-z]+){1,2}"
+                            title="Nom, i almenys un llinatge. S'accepta inicial com a segon nom" required/>
+                    </div>
+                </div>
+
+                <div>
+                    <div><label for="email">Correu electrònic:</label><span id="error_email"></span></div>
+                    <div>
+                        <input type="text" name="email" placeholder="Correu electrònic ..." pattern="[a-z]{2,}([_\.][a-z]{2,})?@[a-z]{4,8}\.[a-z]{2,4}"
+                            title="Només minúscules i amb separador únic '.' o '_' al nom." required/>
+                    </div>
+                </div>
+
+                <div>
+                    <div><label for="CodiPostal">Codi Postal:</label><span id="error_Codi_Postal"></span></div>
+                    <div>
+                        <input type="text" name="codipostal" placeholder="Codi postal" pattern="(5[0-2]|[1-4][0-9]|0[1-9])[0-9]{3}" title="Codi postal vàlid a Espanya"
+                            required/>
+                    </div>
+                </div>
+
+                <div>
+                    <div><label for="telefon">Telèfon:</label><span id="error_email"></span></div>
+                    <div>
+                        <input type="text" name="telefon" placeholder="Telefon" pattern="[6-9]\d{8}" title="Telefon fixo o mòbil" required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="Data de Naixement">Data de Naixement:</label><span id="error_data"></span></div>
+                    <div>
+                        <input type="date" name="Data de Naixement" placeholder="Data de Naixement" title="Dia/mes/any de naixement" required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="Hora de Naixement">Hora de Naixement:</label><span id="error_Hora"></span></div>
+                    <div>
+                        <input type="time" name="Hora de Naixement" placeholder="Hora de Naixement" title="Hores/minuts" required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="Nacionalitat">Nacionalitat:</label><span id="error_text"></span></div>
+                    <div>
+                        <input type="text" name="nacionalitat" placeholder="nacioanlitat" pattern="([A-Z][a-z]+)( [A-Z][a-z]+)?( [A-Z][a-z]+){0,}"
+                            title="Només texte, primera lletra de cada paraula en Majúscula" required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="carrer">Carrer/Via:</label><span id="error_carrer"></span></div>
+                    <div>
+                        <input type="text" name="Carrer" placeholder="Carrer" pattern="([A-Z][a-z]+)( [A-Z][a-z]+)?( [A-Z][a-z]+){0,}" title="Només texte, primera lletra de cada paraula en Majúscula"
+                            required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="numero">Numero:</label><span id="error_numero"></span></div>
+                    <div>
+                        <input type="number" name="numero" placeholder="numero" title="Només numeros" required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="població">Població:</label><span id="error_població"></span></div>
+                    <div>
+                        <input type="text" name="població" placeholder="poblacio" pattern="([A-Z][a-z]+)( [A-Z][a-z]+)?( [A-Z][a-z]+){0,}" title="Només texte, primera lletra de cada paraula en Majúscula"
+                            required/>
+                    </div>
+                </div>
+                <div>
+                    <div><label for="ProvinciaIl">Provincia/Illa:</label><span id="error_ProvinciaIl"></span></div>
+                    <div>
+                        <input type="text" name="provinciaIl" placeholder="Provincia/Illa" pattern="^([A-Z][a-z]+)( [A-Z][a-z]+)?( [A-Z][a-z]+){0,}$"
+                            title="Només texte, primera lletra de cada paraula en Majúscula" required/>
+                    </div>
+                </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Gustos Personals</legend>
+
+
+
+            <div>
+
+
+
+                <div><label for="Cinema" title="Has de triar com a mínim una opció">Cinema:</label></div>
+                <div><input type="checkbox" name="Cinema" value="Terror" />Terror</div>
+                <div><input type="checkbox" name="Cinema" value="Fantàstic" />Fantàstic</div>
+                <div><input type="checkbox" name="Cinema" value="Acció" />Acció</div>
+                <div><input type="checkbox" name="Cinema" value="Drama" />Drama</div>
+                <div><input type="checkbox" name="Cinema" value="Intriga" />Intriga</div>
+            </div>
+
+            <div>
+
+                <div><label for="Viatges" title="Has de triar com a mínim una opció">Viatges:</label></div>
+                <div><input type="checkbox" name="viatges" value="Tot inclos" />Tot inclós</div>
+                <div><input type="checkbox" name="viatges" value="Motxileros" />Motxilero/a</div>
+                <div><input type="checkbox" name="viatges" value="Aventura" />Aventura</div>
+                <div><input type="checkbox" name="viatges" value="SoliPlatja" />Sol i platja</div>
+            </div>
+            <div>
+
+                <div><label for="Cuina" title="Has de triar com a mínim una opció">Cuina:</label></div>
+                <div><input type="checkbox" name="cuina" value="meditarranea" />Mediterranea</div>
+                <div><input type="checkbox" name="cuina" value="oriental" />Oriental</div>
+                <div><input type="checkbox" name="cuina" value="fastFood" />Fast Food</div>
+                <div><input type="checkbox" name="cuina" value="postres" />Postres</div>
+                <div><input type="checkbox" name="cuina" value="vegetariana" />vegetariana</div>
+            </div>
+            <div>
+
+                <div><label for="Esports" title="Has de triar com a mínim una opció">Esports:</label></div>
+                <div><input type="checkbox" name="esports" value="Natació" />Natació</div>
+                <div><input type="checkbox" name="esports" value="Futbol" />Futbol</div>
+                <div><input type="checkbox" name="esports" value="Basquet" />Basquet</div>
+                <div><input type="checkbox" name="esports" value="Handball" />Handball</div>
+                <div><input type="checkbox" name="esports" value="Escacs" />Escacs</div>
+                <div><input type="checkbox" name="esports" value="Esquí" />Esquí</div>
+                <div><input type="checkbox" name="esports" value="Waterpolo" />Waterpolo</div>
+                <div><input type="checkbox" name="esports" value="Altres" />Altres</div>
+            </div>
+            <div>
+
+                <div><label for="Lectura" title="Has de triar com a mínim una opció">Lectura:</label></div>
+                <div><input type="checkbox" name="lectura" value="Novela" />Novela</div>
+                <div><input type="checkbox" name="lectura" value="Poesia" />Poesia</div>
+                <div><input type="checkbox" name="lectura" value="assaig" />Assaig</div>
+                <div><input type="checkbox" name="lectura" value="articles" />Artícles</div>
+                <div><input type="checkbox" name="lectura" value="revistes" />Revistes</div>
+                <div><input type="checkbox" name="lectura" value="contes" />Contes</div>
+                <div><input type="checkbox" name="lectura" value="manuals" />Manuals</div>
+            </div>
+            <div>
+
+                <div><label for="musica" title="Has de triar com a mínim una opció">Música:</label></div>
+                <div><input type="checkbox" name="musica" value="rap" />Rap</div>
+                <div><input type="checkbox" name="musica" value="techno" />Techno</div>
+                <div><input type="checkbox" name="musica" value="salsa" />Salsa</div>
+                <div><input type="checkbox" name="musica" value="reggeaton" />Reggeaton</div>
+                <div><input type="checkbox" name="musica" value="classica" />Clàssica</div>
+                <div><input type="checkbox" name="musica" value="rock" />Rock</div>
+                <div><input type="checkbox" name="musica" value="pop" />Pop</div>
+                <div><input type="checkbox" name="musica" value="ambient" />ambient</div>
+
+
+
+            </div>
+            <div>
+
+                <div><label for="hobbies" title="Has de triar com a mínim una opció">Hobbies:</label></div>
+                <div><input type="checkbox" name="hobbies" value="jardineria" />Jardineria</div>
+                <div><input type="checkbox" name="hobbies" value="macrame" />Macrame</div>
+                <div><input type="checkbox" name="hobbies" value="ioga" />Ioga</div>
+                <div><input type="checkbox" name="hobbies" value="vigeojuegos" />Videojuegos</div>
+                <div><input type="checkbox" name="hobbies" value="viatjar" />Viatjar</div>
+                <div><input type="checkbox" name="hobbies" value="televisio" />Televisió</div>
+
+            </div>
+            <div>
+
+                <div><label for="AsignaturaPref" title="Has de triar com a mínim una opció">Asignatura pref.:</label>
+
+                </div>
+                <div><input type="checkbox" name="AsignaturaPref" value="FOL" />FOL</div>
+                <div><input type="checkbox" name="AsignaturaPref" value="Llenguatgesdemarques" />Llenguatges</div>
+                <div><input type="checkbox" name="AsignaturaPref" value="Sistemes" />Sistemes</div>
+                <div><input type="checkbox" name="AsignaturaPref" value="Programació" />Programació</div>
+                <div><input type="checkbox" name="AsignaturaPref" value="basededades" />Base de dades</div>
+                <div><input type="checkbox" name="AsignaturaPref" value="Entorns" />Entorns</div>
+
+
+            </div>
+            <div>
+                <div><label for="color" title="Clica damunt la capsa de color per fer la tria">Color pref.:</label></div>
+                <div><input type="color" name="color" /></div>
+            </div>
+            <div><span id="error_Cinema"></span>
+                <span id="error_Viatges"></span>
+                <span id="error_cuina"></span>
+                <span id="error_Esports"></span>
+                <span id="error_Lectura"></span>
+                <span id="error_musica"></span>
+                <span id="error_hobbies"></span>
+                <span id="error_AsignaturaPref"></span>
+            </div>
+
+
+
+
+
+
+
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Enquesta de satisfacció</legend>
+            <div>
+                <div><label for="satisdis" title="Has de triar com a mínim una opció">Satisfacció disseny:</label></div>
+                <div><input type="radio" name="satisdis" value="mbaixa" />Molt baixa</div>
+                <div><input type="radio" name="satisdis" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satisdis" value="normal" />Normal</div>
+                <div><input type="radio" name="satisdis" value="alta" />Alta</div>
+                <div><input type="radio" name="satisdis" value="malta" />Molt alta</div>
+            </div>
+            <div>
+                <div><label for="satisus" title="Has de triar com a mínim una opció">Satisfacció usabilitat:</label></div>
+                <div><input type="radio" name="satisus" value="mbaixa" />Molt baixa</div>
+                <div><input type="radio" name="satisus" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satisus" value="normal" />Normal</div>
+                <div><input type="radio" name="satisus" value="alta" />Alta</div>
+                <div><input type="radio" name="satisus" value="malta" />Molt alta</div>
+            </div>
+            <div>
+                <div><label for="satiscom" title="Has de triar com a mínim una opció">Satisfacció comfort:</label></div>
+                <div><input type="radio" name="satiscom" value="mbaixa" />Molt baixa</div>
+                <div><input type="radio" name="satiscom" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satiscom" value="normal" />Normal</div>
+                <div><input type="radio" name="satiscom" value="alta" />Alta</div>
+                <div><input type="radio" name="satiscom" value="malta" />Molt alta</div>
+            </div>
+            <div>
+                <div><label for="satisper" title="Has de triar com a mínim una opció">Satisfacció personal:</label></div>
+                <div><input type="radio" name="satisper" value="mbaixa" />Molt baixa</div>
+                <div><input type="radio" name="satisper" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satisper" value="normal" />Normal</div>
+                <div><input type="radio" name="satisper" value="alta" />Alta</div>
+                <div><input type="radio" name="satisper" value="malta" />Molt alta</div>
+            </div>
+
+
+            <div>
+                <div><label for="satisserv" title="Has de triar com a mínim una opció">Satisfacció servei:</label></div>
+                <div><input type="radio" name="satisserv" value="mbaixa" />Molt Baixa</div>
+                <div><input type="radio" name="satisserv" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satisserv" value="normal" />Normal</div>
+                <div><input type="radio" name="satisserv" value="alta" />Alta</div>
+                <div><input type="radio" name="satisserv" value="malta" />Molt alta</div>
+            </div>
+            <div>
+                <div><label for="satistrac" title="Has de triar com a mínim una opció">Satisfacció tractament:</label></div>
+                <div><input type="radio" name="satistrac" value="mbaixa" />Molt Baixa</div>
+                <div><input type="radio" name="satistrac" value="baixa" />Baixa</div>
+                <div><input type="radio" name="satistrac" value="normal" />Normal</div>
+                <div><input type="radio" name="satistrac" value="alta" />Alta</div>
+                <div><input type="radio" name="satistrac" value="baixa" />Molt alta</div>
+            </div>
+
+
+
+            <span id="error_satisdis"></span>
+            <span id="error_satisus"></span>
+            <span id="error_satiscom"></span>
+            <span id="error_satisper"></span>
+            <span id="error_satisserv"></span>
+            <span id="error_satisper"></span>
+            <span id="error_satisgrl">  </span>
+
+
+
+        </fieldset>
+        <div class="right"><input type="submit" value="Enviar"></div>
+        <div class="right"><input type="reset" value="Esborrar"></div>
+
+    </form>
+
+</body>
+<script src="validarEnt.js"></script>
+
+</html>

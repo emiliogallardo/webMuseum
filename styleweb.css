@@ -1,0 +1,119 @@
+
+@font-face{
+	font-family: Cinzel;
+	src: url(Cinzel-Regular.ttf);
+}
+@font-face{
+	font-family: Cinzel-Bold;
+	src: url(Cinzel-Bold.ttf);
+}
+
+*{
+    font-family: Cinzel;
+    font-size: 12pt;
+
+    color: rgb (245, 148, 148);   
+}
+
+
+body {
+    background: url(imagenes/museova.jpg)  center center fixed;
+	background-size: cover;
+	 
+    
+}
+header {
+		background-image: url();
+		font-family: "Cinzel";
+		font-size: 50pt;
+		text-align: center;
+		line-height: 100px;
+		color: #0E0D08;
+		font-family: "Cinzel-Bold";
+	}
+
+  nav {
+    float: left;
+    background: rgba(208, 222.5, 12.54, 0);
+    width: 140px;
+	height: 1200px;
+	text-align: center;
+}
+
+
+footer {
+            background: rgba(158, 161, 142, 0.67);
+            clear: both;
+        }
+
+img{
+ 			height: 265px;
+			}
+    
+.card{
+		float: left;
+		margin: 8px;
+		background-color: rgba(142, 146, 116, 0.32);
+		
+	
+	}
+fieldset{
+		padding: 4px;
+		font-size: 10;
+		box-shadow: 4px 4px 4px rgb(65, 54, 54);
+		background-color: rgba(210, 211, 200, 0.88);
+		float: left;
+		width: 25%;   
+		height:95%;
+		margin: 4px;
+		border: 1px ridge black;
+		font-family: "Cinzel-Bold";
+		
+		
+	   
+		
+	}
+fieldset>img{
+margin-left: 70px;
+	}
+
+.imgrans{
+
+		height: 600px;
+		margin-left: 400px;
+	 
+	
+	
+
+		
+
+	}
+	.zoom{
+		
+				/* Aumentamos la anchura y altura durante 2 segundos */
+		
+				transition: width 2.5s, height 2.5s, transform 2.5s;
+		
+				-moz-transition: width 2.5s, height 2.5s, -moz-transform 2.5s;
+		
+				-webkit-transition: width 2.5s, height 2.5s, -webkit-transform 2.5s;
+		
+				-o-transition: width 2.5s, height 2.5s,-o-transform 2.5s;
+		
+			}
+		.zoom:hover{
+		
+				/* tranformamos el elemento al pasar el mouse por encima al doble de
+		
+				   su tamaño con scale(2). */
+		
+				transform : scale(2.5);
+		
+				-moz-transform : scale(2.5);      /* Firefox */
+		
+				-webkit-transform : scale(2.5);   /* Chrome - Safari */
+		
+				-o-transform : scale(2.5);        /* Opera */
+		
+			}
+	
